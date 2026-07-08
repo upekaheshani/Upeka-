@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 60px;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00d4ff;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    background: url("https://images.pexels.com/photos/38327062/pexels-photo-38327062.jpeg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Dark overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.overlay {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    z-index: 1;
+    padding: 40px;
+}
+
+.overlay h1 {
+    font-size: 60px;
+}
+
+.overlay p {
+    margin-top: 15px;
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+/* Separator */
+.separator {
+    height: 90px;
+    background: linear-gradient(135deg, #00d4ff, #6c63ff);
+    clip-path: polygon(0 0, 100% 40%, 100% 100%, 0 60%);
+}
+
+/* Content */
+.content {
+    padding: 80px 10%;
+    background: #fff;
+    text-align: center;
+}
+
+.content h2 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #333;
+}
+
+.content p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 20px;
+    }
+
+    nav ul li {
+        margin-left: 15px;
+    }
+
+    .overlay h1 {
+        font-size: 36px;
+    }
+
+    .overlay p {
+        font-size: 16px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    nav ul {
+        display: none;
+    }
+
+    .overlay h1 {
+        font-size: 28px;
+    }
+
+    .overlay p {
+        font-size: 14px;
+    }
+}
